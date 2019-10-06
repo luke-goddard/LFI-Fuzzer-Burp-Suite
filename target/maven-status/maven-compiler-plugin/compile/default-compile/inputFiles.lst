@@ -30,13 +30,15 @@
 /home/luke/documents/java/LfiBurp/src/main/java/LfiFuzzer/PayloadGeneratorConfig.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/IHttpListener.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/IBurpExtenderCallbacks.java
+/home/luke/documents/java/LfiBurp/src/main/java/LfiFuzzer/payloadTypes/ExtraCharsPayloads.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/IMenuItemHandler.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/IParameter.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/IMessageEditorController.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/ITab.java
+/home/luke/documents/java/LfiBurp/src/main/java/LfiFuzzer/payloadTypes/NullBytePayloads.java
 /home/luke/documents/java/LfiBurp/src/main/java/LfiFuzzer/PayloadGenerator.java
-/home/luke/documents/java/LfiBurp/src/main/java/LfiFuzzer/payloadTypes/ExtraSlashPayloads.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/IProxyListener.java
+/home/luke/documents/java/LfiBurp/src/main/java/LfiFuzzer/QuickSort.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/IContextMenuFactory.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/BurpExtender.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/ICookie.java

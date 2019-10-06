@@ -1,0 +1,7 @@
+archive-tmp/
+classes/
+generated-sources/
+LfiBurp-1.0.jar/
+LfiBurp-1.0-jar-with-dependencies.jar
+maven-archiver/
+maven-status/

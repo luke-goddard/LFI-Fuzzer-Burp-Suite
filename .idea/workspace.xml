@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="550f659b-d07f-4060-b2b9-ee742b3818e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/LfiFuzzer/PayloadConfigException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/LfiFuzzer/PayloadGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/LfiFuzzer/PayloadGeneratorConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/LfiFuzzer/QuickSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/LfiFuzzer/UserInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/LfiFuzzer/payloadTypes/ExtraCharsPayloads.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/LfiFuzzer/payloadTypes/NullBytePayloads.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/LfiFuzzer/payloadTypes/PayloadFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/LfiFuzzer/payloadTypes/PayloadNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/LfiFuzzer/payloadTypes/PayloadType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/LfiFuzzer/payloadTypes/TransversalPayloads.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/burp/BurpExtender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LfiFuzzer/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LfiFuzzer/QuickSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RaptorClient/.attach_pid12625" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../RaptorClient/.attach_pid12709" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../RaptorClient/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RaptorClient/.idea/compiler.xml" afterDir="false" />
@@ -246,19 +238,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/LfiFuzzer/QuickSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="45">
+              <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
               <folding>
-                <element signature="e#142#143#0" expanded="true" />
+                <element signature="e#154#155#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/LfiFuzzer/PayloadGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
+            <state relative-caret-position="132">
               <caret line="47" column="48" lean-forward="true" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -289,15 +290,6 @@
                 <element signature="e#231#232#0" expanded="true" />
                 <element signature="e#278#279#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/LfiFuzzer/payloadTypes/PayloadNotFoundException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -387,7 +379,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -418,9 +410,10 @@
         <option value="$PROJECT_DIR$/src/main/java/LfiFuzzer/payloadTypes/NullBytePayloads.java" />
         <option value="$PROJECT_DIR$/src/main/java/LfiFuzzer/UserInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/LfiFuzzer/payloadTypes/ExtraCharsPayloads.java" />
-        <option value="$PROJECT_DIR$/src/main/java/LfiFuzzer/QuickSort.java" />
         <option value="$PROJECT_DIR$/src/main/java/burp/BurpExtender.java" />
         <option value="$PROJECT_DIR$/src/main/java/LfiFuzzer/PayloadGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/LfiFuzzer/QuickSort.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -454,10 +447,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1922" />
-    <option name="y" value="-24" />
-    <option name="width" value="1083" />
-    <option name="height" value="1102" />
+    <option name="x" value="1920" />
+    <option name="y" value="-26" />
+    <option name="width" value="1920" />
+    <option name="height" value="1106" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -476,49 +469,6 @@
             <path>
               <item name="LfiBurp" type="b2602c69:ProjectViewProjectNode" />
               <item name="LfiBurp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LfiBurp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LfiBurp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LfiBurp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LfiBurp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LfiBurp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LfiBurp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="burp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LfiBurp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LfiBurp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="LfiFuzzer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LfiBurp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LfiBurp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="LfiFuzzer" type="462c0819:PsiDirectoryNode" />
-              <item name="payloadTypes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LfiBurp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LfiBurp" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -527,6 +477,9 @@
       </pane>
       <pane id="PackagesPane" />
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -603,7 +556,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1922" y="-24" width="1083" height="1102" extended-state="0" />
+    <frame x="1920" y="-26" width="1920" height="1106" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
@@ -611,7 +564,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27569646" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15282215" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" weight="0.32962587" />
@@ -989,16 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/LfiFuzzer/QuickSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#142#143#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/burp/BurpExtender.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1016,11 +959,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/LfiFuzzer/PayloadGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
+        <state relative-caret-position="132">
           <caret line="47" column="48" lean-forward="true" selection-start-line="47" selection-start-column="48" selection-end-line="47" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/LfiFuzzer/QuickSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+          <folding>
+            <element signature="e#154#155#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
