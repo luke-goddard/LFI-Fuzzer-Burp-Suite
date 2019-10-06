@@ -15,12 +15,12 @@ Go to Extender->Extensions and click in the Add button. Next select Java as the 
 
 Make sure that you have maven installed and java. Then run the following to package the java. Note you will need an internet connection for the maven runtime dependencies.
 
-`
+```
 git clone https://github.com/luke-goddard/LFI-Fuzzer-Burp-Suite
 cd LFI-Fuzzer-Burp-Suite
 mvn compile package 
 file target/LfiBurp-1.0-jar-with-dependencies.jar
-`
+```
 
 ### Tested With
 
