@@ -10,25 +10,12 @@ import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.TreeSet;
+
+import static LfiFuzzer.TreeStructure.getTree;
 
 public class PayloadGenerator {
     private PayloadGeneratorConfig config;
-
-    // For reason Java's HashSet does not generate a hashcode for byte arrays
-    // So we can use a Tree Set and set a Comparator
-    private Set<byte []> payloads = new TreeSet<>((left, right) -> {
-        if(left == null || right == null) return 0;
-        for (int i = 0, j = 0; i < left.length && j < right.length; i++, j++) {
-            int a = (left[i] & 0xff);
-            int b = (right[j] & 0xff);
-            if (a != b) {
-                return b - a;
-            }
-        }
-        return  right.length - left.length;
-    });
-
+    private Set<byte []> payloads = getTree();
     private PrintWriter stdout;
     private PrintWriter stderr;
     private IExtensionHelpers helpers;
@@ -122,6 +109,7 @@ public class PayloadGenerator {
             PayloadType nullByteSuffix = PayloadFactory.getPayloadType("Nullbytes", payloads, config);
             nullByteSuffix.setStd(stdout, stderr);
             Set<byte []> newPayloads = nullByteSuffix.generatePayload();
+            if(config.nullByteYes && !config.nullByteNo) payloads.clear();
             stdout.println("Generated " + newPayloads.size()+ " new payloads");
             return nullByteSuffix.generatePayload();
         }catch (PayloadNotFoundException e){
@@ -139,6 +127,7 @@ public class PayloadGenerator {
             i++;
             newPayloads.add(helpers.urlEncode(oldPayload));
         }
+        if(config.urlEncodeYes && !config.urlEncodeNo) payloads.clear();
         stdout.println("Generated " + i + " new payloads");
         return newPayloads;
     }
@@ -152,6 +141,7 @@ public class PayloadGenerator {
             i++;
             newPayloads.add(helpers.urlEncode(oldPayload));
         }
+        if(config.doubleUrlEncodeYes && !config.doubleUrlEncodeNo) payloads.clear();
         stdout.println("Generated " + i + " new payloads");
         return newPayloads;
     }
@@ -163,6 +153,7 @@ public class PayloadGenerator {
         for(byte[] oldPayload: payloads){
             newPayloads.add(new String(oldPayload, StandardCharsets.UTF_8).getBytes());
         }
+        if(config.utf8EncodeYes && !config.utf8EncodeNo) payloads.clear();
         stdout.println("Generated " + newPayloads.size()+ " new payloads");
         return newPayloads;
     }

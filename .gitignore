@@ -1,1 +1,8 @@
+target/archive-tmp/
+target/classes/
+target/generated-sources/
+target/LfiBurp-1.0.jar/
+target/LfiBurp-1.0-jar-with-dependencies.jar
+target/maven-archiver/
+target/maven-status/
 .idea/

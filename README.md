@@ -25,6 +25,3 @@ file target/LfiBurp-1.0-jar-with-dependencies.jar
 ### Tested With
 
 I have built the plugin using openjdk version "1.8.0_212". 
-
-
-

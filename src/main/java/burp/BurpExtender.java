@@ -65,7 +65,7 @@ public class BurpExtender implements IBurpExtender, IIntruderPayloadGeneratorFac
             generatePayloads(config);
         }
 
-        public void generatePayloads(PayloadGeneratorConfig config){
+        void generatePayloads(PayloadGeneratorConfig config){
             PayloadGenerator generator = new PayloadGenerator(config, stdout, stderr, helpers);
             Set<byte[]> payloadsSet = generator.generatePayloads();
             int i = 0;

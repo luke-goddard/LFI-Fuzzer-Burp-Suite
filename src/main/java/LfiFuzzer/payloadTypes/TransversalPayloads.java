@@ -1,9 +1,8 @@
 package LfiFuzzer.payloadTypes;
 
 import LfiFuzzer.PayloadGeneratorConfig;
-
 import java.util.Set;
-import java.util.TreeSet;
+import static LfiFuzzer.TreeStructure.getTree;
 
 /**
  * Creates a set of byte arrays containing different directory transversals
@@ -24,20 +23,8 @@ public class TransversalPayloads extends PayloadType{
     }
 
     private Set<byte[]> generatePayloadsForUniqFile(byte[] fileToInclude){
-        // Create a TreeSet so that byte arrays have a valid hashcode
-        Set<byte []> payloadsForFile = new TreeSet<>((left, right) -> {
-            if(left == null || right == null) return 0;
-            for (int i = 0, j = 0; i < left.length && j < right.length; i++, j++) {
-                int a = (left[i] & 0xff);
-                int b = (right[j] & 0xff);
-                if (a != b) {
-                    return a - b;
-                }
-            }
-            return left.length - right.length;
-        });
+        Set<byte []> payloadsForFile = getTree();
         byte[] transversal = getBytes("..");
-
         byte[] transversalWithSlash = concatByteArrays(transversal, getBytes(this.slashDirection));
 
         for(int x = config.tranMin; x <= config.tranMax; x++){
@@ -61,6 +48,6 @@ public class TransversalPayloads extends PayloadType{
     }
 
     private boolean checkIfFirstByteIsSlash(byte[] fileToInclude){
-        return fileToInclude[0] == getBytes("//")[0] || fileToInclude[0] == getBytes("\\")[0];
+        return fileToInclude[0] == getBytes("/")[0] || fileToInclude[0] == getBytes("\\")[0];
     }
 }

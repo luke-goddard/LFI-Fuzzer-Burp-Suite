@@ -9,25 +9,15 @@ import java.nio.charset.StandardCharsets;
 import java.util.Set;
 import java.util.TreeSet;
 
+import static LfiFuzzer.TreeStructure.getTree;
+
 public abstract class PayloadType {
     Set<byte []> previousPayloads;
-
-    // For reason Java's HashSet does not generate a hashcode for byte arrays
-    // So we can use a Tree Set and set a Comparator
-    Set<byte []> newPayloads = new TreeSet<>((left, right) -> {
-        for (int i = 0, j = 0; i < left.length && j < right.length; i++, j++) {
-            int a = (left[i] & 0xff);
-            int b = (right[j] & 0xff);
-            if (a != b) {
-                return a - b;
-            }
-        }
-        return left.length - right.length;
-    });
-
+    Set<byte []> newPayloads = getTree();
     PayloadGeneratorConfig config;
     String slashDirection;
-    PrintWriter stdout;
+
+    private PrintWriter stdout;
     private PrintWriter stderr;
 
     PayloadType(Set<byte[]> previousPayloads, PayloadGeneratorConfig config){
@@ -45,7 +35,7 @@ public abstract class PayloadType {
         this.stderr = stderr;
     }
 
-    public byte[] concatByteArrays(byte[] a, byte[] b){
+    byte[] concatByteArrays(byte[] a, byte[] b){
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream( );
         try {
             outputStream.write( a );
