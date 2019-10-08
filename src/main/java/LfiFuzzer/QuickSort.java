@@ -1,5 +1,8 @@
 package LfiFuzzer;
 
+/**
+ * Organize the payloads by smallest first.
+ */
 public class QuickSort {
     // TODO
     byte[][] payloads;

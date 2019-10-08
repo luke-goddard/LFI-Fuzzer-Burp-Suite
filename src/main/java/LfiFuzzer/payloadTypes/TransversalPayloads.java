@@ -26,22 +26,17 @@ public class TransversalPayloads extends PayloadType{
         Set<byte []> payloadsForFile = getTree();
         byte[] transversal = getBytes("..");
         byte[] transversalWithSlash = concatByteArrays(transversal, getBytes(this.slashDirection));
+        byte[] currentPayload;
 
-        for(int x = config.tranMin; x <= config.tranMax; x++){
-            byte[] currentPayload = getBytes("");
+        for(int x = config.tranMin -1; x <= config.tranMax; x++){
+            currentPayload = getBytes("");
             for(int y = 0; y <=x ; y++){
                 if (y == x && checkIfFirstByteIsSlash(fileToInclude)){
                     // Stop the first payload getting an extra slash
                     currentPayload = concatByteArrays(currentPayload, transversal);
                 }
-                else{
-                    currentPayload = concatByteArrays(currentPayload, transversalWithSlash);
-                }
+                else currentPayload = concatByteArrays(currentPayload, transversalWithSlash);
             }
-
-            //stdout.print("(Tran " + x + ")");
-            //printPayloadBeforeAndAfter(fileToInclude, concatByteArrays(currentPayload, fileToInclude)); //TODO REMOVE
-
             payloadsForFile.add(concatByteArrays(currentPayload, fileToInclude));
         }
         return payloadsForFile;

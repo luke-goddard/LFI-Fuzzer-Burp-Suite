@@ -7,10 +7,13 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.Set;
-import java.util.TreeSet;
 
 import static LfiFuzzer.TreeStructure.getTree;
 
+/**
+ * Generic class that holds newly generated payloads for
+ * a specific type.
+ */
 public abstract class PayloadType {
     Set<byte []> previousPayloads;
     Set<byte []> newPayloads = getTree();
@@ -37,6 +40,7 @@ public abstract class PayloadType {
 
     byte[] concatByteArrays(byte[] a, byte[] b){
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream( );
+
         try {
             outputStream.write( a );
             outputStream.write( b );
@@ -45,14 +49,12 @@ public abstract class PayloadType {
             stderr.println(e.toString());
         }
         return new byte[0];
-
     }
 
     public void printPayloadBeforeAndAfter(byte[] before, byte[] after){
         String b = new String(before, StandardCharsets.UTF_8);
         String a = new String(after, StandardCharsets.UTF_8);
         stdout.println(b + " -> " + a);
-
     }
 
     public void printBytes(byte[] b){
@@ -60,9 +62,7 @@ public abstract class PayloadType {
     }
 
     private String findSlashDirection(){
-        if(config.forwardSlash){
-            return "/";
-        }
+        if(config.forwardSlash) return "/";
         return "\\";
     }
 

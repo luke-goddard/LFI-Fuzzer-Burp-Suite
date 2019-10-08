@@ -4,6 +4,9 @@ import LfiFuzzer.PayloadGeneratorConfig;
 
 import java.util.Set;
 
+/**
+ * Adds some extra characters to try and bypass filter sanitation.
+ */
 public class ExtraCharsPayloads extends PayloadType{
 
     private int charMin; 
@@ -22,14 +25,11 @@ public class ExtraCharsPayloads extends PayloadType{
             charMax = config.dotsMax;
             replaceChar = getBytes(".")[0];
         }
-        
     }
 
     @Override
     public Set<byte[]> generatePayload(){
-        for(byte [] currentPayload: previousPayloads){
-            replaceCharactersForFile(currentPayload);
-        }
+        for(byte [] currentPayload: previousPayloads) replaceCharactersForFile(currentPayload);
         return newPayloads;
     }
 
@@ -40,14 +40,12 @@ public class ExtraCharsPayloads extends PayloadType{
     }
 
     private byte[] replaceCharacters(int numberOfCharacters, byte[] payload){
-        if(numberOfCharacters < 2){
-            return new byte[0];
-        }
+        if(numberOfCharacters < 2) return new byte[0];
 
         int currentSlashCount = getNumberOfReplaceableCharactersInPayload(payload);
         byte[] newPayload = new byte[payload.length + (currentSlashCount * numberOfCharacters)];
-
         int extra = 0;
+
         for(int x = 0; x < payload.length ; x++){
             if(payload[x] == replaceChar){
                 for(int y=0; y <= numberOfCharacters -1; y++){
@@ -57,11 +55,6 @@ public class ExtraCharsPayloads extends PayloadType{
             }
             newPayload[x + extra] = payload[x];
         }
-
-        //TODO REMOVE
-        //this.stdout.print("(Characters " + numberOfCharacters + ":" + currentSlashCount + " )");
-        //printPayloadBeforeAndAfter(payload, newPayload);
-
         concatByteArrays(payload, newPayload);
         return newPayload;
     }
@@ -69,11 +62,8 @@ public class ExtraCharsPayloads extends PayloadType{
     private int getNumberOfReplaceableCharactersInPayload(byte[] payload){
         int currentSlashCount = 0;
         byte characterByte = replaceChar;
-        for (byte b : payload) {
-            if (characterByte == b) {
-                currentSlashCount++;
-            }
-        }
+
+        for (byte b : payload) if (characterByte == b) currentSlashCount++;
         return currentSlashCount;
     }
 }

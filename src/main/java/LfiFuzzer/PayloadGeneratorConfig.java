@@ -37,11 +37,11 @@ public class PayloadGeneratorConfig {
     boolean zipWrapper = false;
 
     public boolean forwardSlash = true;
-    boolean backwardsSlash = false;
+    public boolean backwardsSlash = false;
 
     Set<String> filesToInclude = new HashSet<>();
 
-    int getPayloadCardinality() throws PayloadConfigException {
+    public int getPayloadCardinality() throws PayloadConfigException {
         int cardinality = 1;
         int tranTot = tranMax - tranMin + 1;
         int slashesTot = slashMax - slashMin + 1;
@@ -51,6 +51,8 @@ public class PayloadGeneratorConfig {
         int doubleURLEncodeTot = convertNoOrYesOrBoth(doubleUrlEncodeNo, doubleUrlEncodeYes);
         int utfEncodeTot = convertNoOrYesOrBoth(utf8EncodeNo, utf8EncodeYes);
         int slashDirectionTot = convertNoOrYesOrBoth(forwardSlash, backwardsSlash);
+
+        if(!validateSettings())throw new PayloadConfigException("Invalid Configurations");
 
         cardinality *= fileCount;
         cardinality *= tranTot;
@@ -66,8 +68,19 @@ public class PayloadGeneratorConfig {
         cardinality *= convertBooleanToInt(pharWrapper);
         cardinality *= convertBooleanToInt(zipWrapper);
 
-        if (cardinality < 1) throw new PayloadConfigException("Invalid Configurations");
         return cardinality;
+    }
+
+    private boolean validateSettings(){
+        return testMinValues() && testPairs();
+    }
+
+    private boolean testMinValues(){
+        return tranMin >= 0 && tranMax >= 0 && slashMax >= 0 && slashMin >= 0 && dotsMax >= 0 && dotsMin >= 0;
+    }
+
+    private boolean testPairs(){
+        return dotsMax >= dotsMin && slashMax >= slashMin && tranMax >= tranMin;
     }
 
     private int convertNoOrYesOrBoth(boolean a, boolean b){

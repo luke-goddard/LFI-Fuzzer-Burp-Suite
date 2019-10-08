@@ -9,9 +9,6 @@ import java.io.PrintWriter;
 import java.util.Set;
 
 
-/**
- * Local File Inclusion Fuzzer
- */
 public class BurpExtender implements IBurpExtender, IIntruderPayloadGeneratorFactory
 {
     private IExtensionHelpers helpers;

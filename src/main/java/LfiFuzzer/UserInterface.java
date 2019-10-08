@@ -13,6 +13,11 @@ import java.util.Set;
 
 import static java.nio.charset.StandardCharsets.US_ASCII;
 
+/**
+ * User interface for the LFI Fuzzer tab
+ * This user interface allows the user to configure the
+ * payloads that will be generated.
+ */
 public class UserInterface implements Runnable, ITab {
 
     private PayloadGeneratorConfig payloadGeneratorConfig = new PayloadGeneratorConfig();
