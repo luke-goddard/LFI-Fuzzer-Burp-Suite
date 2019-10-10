@@ -1,0 +1,7 @@
+/home/luke/documents/java/LfiBurp/src/test/java/LfiFuzzer/payloadTypes/ExtraCharsPayloadsTest.java
+/home/luke/documents/java/LfiBurp/src/test/java/LfiFuzzer/payloadTypes/TransversalPayloadsTest.java
+/home/luke/documents/java/LfiBurp/src/test/java/LfiFuzzer/payloadTypes/WrapperPayloadsTest.java
+/home/luke/documents/java/LfiBurp/src/test/java/LfiFuzzer/payloadTypes/NullBytePayloadsTest.java
+/home/luke/documents/java/LfiBurp/src/test/java/LfiFuzzer/PayloadGeneratorConfigTest.java
+/home/luke/documents/java/LfiBurp/src/test/java/LfiFuzzer/TreeStructureTest.java
+/home/luke/documents/java/LfiBurp/src/test/java/LfiFuzzer/payloadTypes/PayloadFactoryTest.java

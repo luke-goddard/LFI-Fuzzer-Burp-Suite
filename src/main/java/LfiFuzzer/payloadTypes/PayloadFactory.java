@@ -15,6 +15,8 @@ public class PayloadFactory {
                 return new ExtraCharsPayloads(previousPayloads, config, "dots");
             case "Nullbytes":
                 return new NullBytePayloads(previousPayloads, config);
+            case "Wrappers":
+                return new WrapperPayloads(previousPayloads, config);
         }
         throw new PayloadNotFoundException("Failed to find payload type: " + type);
     }

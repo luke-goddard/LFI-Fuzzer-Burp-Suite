@@ -17,6 +17,7 @@
 /home/luke/documents/java/LfiBurp/src/main/java/burp/IHttpRequestResponse.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/IScannerInsertionPoint.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/IExtensionHelpers.java
+/home/luke/documents/java/LfiBurp/src/main/java/LfiFuzzer/payloadTypes/WrapperPayloads.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/IScanIssue.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/IScannerCheck.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/IInterceptedProxyMessage.java
@@ -38,7 +39,6 @@
 /home/luke/documents/java/LfiBurp/src/main/java/LfiFuzzer/payloadTypes/NullBytePayloads.java
 /home/luke/documents/java/LfiBurp/src/main/java/LfiFuzzer/PayloadGenerator.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/IProxyListener.java
-/home/luke/documents/java/LfiBurp/src/main/java/LfiFuzzer/QuickSort.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/IContextMenuFactory.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/BurpExtender.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/ICookie.java
@@ -47,6 +47,7 @@
 /home/luke/documents/java/LfiBurp/src/main/java/burp/IResponseVariations.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/ISessionHandlingAction.java
 /home/luke/documents/java/LfiBurp/src/main/java/LfiFuzzer/payloadTypes/PayloadFactory.java
+/home/luke/documents/java/LfiBurp/src/main/java/LfiFuzzer/TreeStructure.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/IRequestInfo.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/IScannerInsertionPointProvider.java
 /home/luke/documents/java/LfiBurp/src/main/java/burp/IIntruderPayloadGenerator.java

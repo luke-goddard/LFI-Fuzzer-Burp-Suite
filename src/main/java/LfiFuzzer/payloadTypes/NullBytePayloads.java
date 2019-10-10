@@ -16,6 +16,7 @@ public class NullBytePayloads extends PayloadType{
     @Override
     public Set<byte[]> generatePayload(){
         if(!config.nullByteYes) return newPayloads;
+        if(previousPayloads.isEmpty()) previousPayloads.add(getBytes(""));
         for(byte[] oldPayload : previousPayloads){
             byte[] newPayload = concatByteArrays(oldPayload, getBytes("%00"));
             newPayloads.add(newPayload);

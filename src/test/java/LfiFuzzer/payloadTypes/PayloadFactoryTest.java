@@ -1,9 +1,8 @@
 package LfiFuzzer.payloadTypes;
 
-import LfiFuzzer.PayloadConfigException;
 import LfiFuzzer.PayloadGeneratorConfig;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
 
 import java.util.Set;
 
@@ -13,11 +12,21 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class PayloadFactoryTest {
 
-    private Set<byte []> previousPayloads = getTree();
-    private PayloadGeneratorConfig config = new PayloadGeneratorConfig();
+    private Set<byte []> payloads;
+    private PayloadGeneratorConfig config;
+
+    @BeforeEach
+    void setup(){
+        payloads = getTree();
+        config = new PayloadGeneratorConfig();
+    }
 
     @Test
-    void getPayloadType() {
-        //TODO
+    void getInvalidPayloadTypeTest(){
+        String failInfo = "failed to raise correct exception with invalid payload generator type";
+        Throwable exception = assertThrows(PayloadNotFoundException.class, () -> {
+            PayloadFactory.getPayloadType("fake", payloads, config);
+        });
+        assertEquals("Failed to find payload type: fake", exception.getMessage(), failInfo);
     }
 }

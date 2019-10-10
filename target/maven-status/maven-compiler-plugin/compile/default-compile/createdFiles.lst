@@ -9,6 +9,7 @@ burp/IScanQueueItem.class
 burp/IMenuItemHandler.class
 burp/IProxyListener.class
 burp/IIntruderPayloadGeneratorFactory.class
+LfiFuzzer/TreeStructure.class
 burp/IScannerInsertionPointProvider.class
 burp/ISessionHandlingAction.class
 burp/IScopeChangeListener.class
@@ -37,10 +38,10 @@ burp/IScanIssue.class
 burp/IScannerInsertionPoint.class
 burp/IIntruderPayloadGenerator.class
 burp/IBurpCollaboratorInteraction.class
+LfiFuzzer/payloadTypes/WrapperPayloads.class
 burp/IBurpExtenderCallbacks.class
 burp/ICookie.class
 LfiFuzzer/payloadTypes/ExtraCharsPayloads.class
-LfiFuzzer/QuickSort.class
 burp/IBurpCollaboratorClientContext.class
 LfiFuzzer/payloadTypes/PayloadType.class
 LfiFuzzer/PayloadGeneratorConfig.class

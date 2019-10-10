@@ -20,21 +20,21 @@ public class PayloadGeneratorConfig {
     public int dotsMax = 3;
 
     public boolean nullByteYes = false;
-    boolean nullByteNo = true;
+    public boolean nullByteNo = true;
 
-    boolean urlEncodeYes = false;
-    boolean urlEncodeNo = true;
+    public boolean urlEncodeYes = false;
+    public boolean urlEncodeNo = true;
 
-    boolean doubleUrlEncodeYes = false;
-    boolean doubleUrlEncodeNo = true;
+    public boolean doubleUrlEncodeYes = false;
+    public boolean doubleUrlEncodeNo = true;
 
-    boolean utf8EncodeYes= false;
-    boolean utf8EncodeNo = true;
+    public boolean utf8EncodeYes= false;
+    public boolean utf8EncodeNo = true;
 
-    boolean expectWrapper = false;
-    boolean filterWrapper = false;
-    boolean pharWrapper = false;
-    boolean zipWrapper = false;
+    public boolean expectWrapper = false;
+    public boolean filterWrapper = false;
+    public boolean pharWrapper = false;
+    public boolean zipWrapper = false;
 
     public boolean forwardSlash = true;
     public boolean backwardsSlash = false;

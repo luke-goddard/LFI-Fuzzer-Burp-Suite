@@ -45,6 +45,7 @@ public class PayloadGenerator {
         payloads.addAll(generateSingleUrlEncode());
         payloads.addAll(generateDoubleUrlEncode());
         payloads.addAll(generateUtf8Encode());
+        payloads.addAll(generateWrappers());
 
         stdout.println("Finished Generating Payloads");
         return payloads;
@@ -173,6 +174,15 @@ public class PayloadGenerator {
 
         if(config.utf8EncodeYes && !config.utf8EncodeNo) payloads.clear();
         stdout.println("Generated " + newPayloads.size()+ " new payloads");
+        return newPayloads;
+    }
+
+    private Set<byte []> generateWrappers(){
+        Set<byte []> newPayloads = new HashSet<>();
+        if(config.expectWrapper || config.filterWrapper || config.pharWrapper || config.zipWrapper){
+            PayloadType wrapperGenerator = PayloadFactory.getPayloadType("Wrappers", payloads, config);
+            newPayloads = wrapperGenerator.generatePayload();
+        }
         return newPayloads;
     }
 
